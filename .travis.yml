@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- 0.1
+
+before_deploy:
+- if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
+
+deploy:
+  provider: heroku
+  app: secure-notes
+  strategy: git
+  api_key:
+    secure: m/vKy7CaiLghVQWGsYWv/ue2afAOXpsiqlYD0MxtrOS7Jxkqi4Z0aIHkgL7AqU/Em+Wfi6O1wvMQFsL8Lo5D0hJsxZatpbU5mTCbAVag8UaiAV3BF+Uu+rB4dvNG3B4exiN+1KXCvEedwfpdxUTt8SVSsYXltCAR/u42z3NsEw4=
