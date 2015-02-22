@@ -1,0 +1,10 @@
+
+
+
+
+- possible document structure (full supported by angularjs-crypto)
+{ e_author: 'alias1', date: 2015-02-26, notes:[{time:18:00:00, e_text:'adadad'},{time:null, e_text:'asdasdasd']}
+
+- easiest document structure (not supported by angularjs-crypto !!! Missing supported of encrypt and decrypt javascript arrays!)
+{ e_author: 'alias1', date: 2015-02-27, e_notes:['adad']}
+{ e_author: 'alias2', date: 2015-02-28, e_notes:['dasdasd', 'sdasdasad']}
