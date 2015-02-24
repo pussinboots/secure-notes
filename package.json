@@ -2,9 +2,10 @@
   "name": "secure-notes",
   "version": "0.0.1",
   "dependencies": {
+    "bower": "^1.3.12",
     "connect": "^3.3.4",
     "serve-static": "^1.8.1",
-    "wiredep": "^1.7.2",
+    "wiredep": "^2.2.2",
     "coffee-script": "~1.9.0"
   },
   "engines": {
@@ -14,6 +15,7 @@
     "server.js"
   ],
   "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install"
   },
   "devDependencies": {
   }
