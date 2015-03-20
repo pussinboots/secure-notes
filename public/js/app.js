@@ -1,6 +1,6 @@
 'use strict';
 /* App Module */
-var demoApp = angular.module('secureNotes', ['angularjs-crypto', 'ngRoute', 'controllers']);
+var demoApp = angular.module('secureNotes', ['angularjs-crypto', 'ngRoute', 'controllers', 'services']);
 
 demoApp.config(function ($routeProvider) {
     $routeProvider

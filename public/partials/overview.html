@@ -1,30 +1,21 @@
 <h3>Notes</h3>
-<div class="row" ng-controller = "OverviewCtrl">
-	<div class="input-group">
-		      <span class="input-group-btn">
-		        	<button class="btn btn-default" ng-click="addItem(newItem)" type="button">Add</button>
-		      </span>
-		      <input type="text" class="form-control" ng-model="newItem.author_enc" placeholder="author">
-		      <input type="text" class="form-control" ng-model="newItem.date" placeholder="date">
-	    </div>
-  	<div class="col-sm-6 col-md-4" ng-repeat="item in items">
+<div ng-controller = "OverviewCtrl">
+	<div style="color:red;">{{errorMsg}}</div>
+	<input type="text" class="form-control" ng-model="newItem.author" placeholder="author">
+	<input type="text" class="form-control" ng-model="newItem.text" placeholder="text">
+	<button class="btn btn-default" ng-click="add(newItem)" type="button">Add</button>
+	<div ng-repeat="item in items">
   		<div class="caption" id="value">{{item.date}}</div>
 		<div class="input-group">
-			  <span class="input-group-addon" id="basic-addon1">author</span>
-			  <div id="name">{{item.author_enc}}</div>
+			  <span class="input-group-addon" id="basic-addon1">&nbsp;&nbsp;author&nbsp;&nbsp;</span>
+			  <input type="text" class="form-control" ng-model="item.author_enc" aria-describedby="basic-addon1">
 			</div>
 		<div class="encrypted" ng-repeat="note in item.notes">
 			<div class="input-group">
-			  <span class="input-group-addon" id="basic-addon1">{{note.time}}</span>
+			  <span class="input-group-addon" id="basic-addon1">{{note.time || '00:00:00'}}</span>
 			  <input type="text" class="form-control" ng-model="note.text_enc" aria-describedby="basic-addon1">
 			</div>
 		</div>
-	 	<div class="input-group">
-		      <span class="input-group-btn">
-		        	<button class="btn btn-default" ng-click="add(item, newNote)" type="button">Add</button>
-		      </span>
-		      <input type="text" class="form-control" ng-model="newNote.time" placeholder="time">
-		      <input type="text" class="form-control" ng-model="newNote.text_enc" placeholder="text">
-	    </div><!-- /input-group -->
+		<br />
 	</div>
 </div>
